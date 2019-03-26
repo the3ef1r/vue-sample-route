@@ -1,8 +1,8 @@
 {
-  "name": "project-vue",
+  "name": "vue-sample-route",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Maxim Molokanov <maxim.molokanov@smart-com.su>",
+  "author": "Rodion Bagirov <the3ef1r@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -39,6 +39,6 @@
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "http://rodion.bagirov@192.168.10.129:8080/tfs/DotNET_Project_Collection/Element-ui-sample/_git/ElementUISample"
+    "url": "https://github.com/the3ef1r/vue-sample-route"
   }
 }

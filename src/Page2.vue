@@ -1,20 +1,13 @@
 <template>
-  <div>
-    
-    <form-check></form-check>
+  <div class="main">
+    <el-row>
+      <el-button>Page2</el-button>
+    </el-row>
   </div>
 </template>
 
 <script>
-import formCheck from './components/formCheck'
-  export default {
-    components: {
-      "formCheck": formCheck,
-    },
-    methods: {
-      
-    }
-  }
+export default {};
 </script>
 
 <style lang="scss">

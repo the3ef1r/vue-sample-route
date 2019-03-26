@@ -21,7 +21,6 @@
 </template>
 <script>
 import router from "./routing";
-
 export default {
   name: "app",
   router,
