@@ -1,3 +1,3 @@
 # vue-sample-route
-I love :coffe: and :pizza:
+I love :coffee: and :pizza:
 
