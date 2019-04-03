@@ -1,24 +1,71 @@
-import Page1 from './Page1'
-import Page2 from './Page2'
-import Page3 from './Page3'
-import Page4 from './Page4'
-import Page5 from './Page5'
-import Page6 from './Page6'
-import Page7 from './Page7'
-import Page404 from './404'
+import AOB from './AOB/index.vue'
+import BalanceReport from './BalanceReport/index.vue'
+import Home from './Home/index.vue'
+import IssueTracker from './IssueTracker/index.vue'
+import Minutes from './Minutes/index.vue'
+import Matrix from './Matrix/index.vue'
+import Layout from './components/Layout.vue'
+
+
 
 
 const routes = [
- 
-  { path: '/page1', component: Page1 },
-  { path: '/page2', component: Page2 },
-  { path: '/page3', component: Page3 },
-  { path: '/page4', component: Page4 },
-  { path: '/page5', component: Page5 },
-  { path: '/page6', component: Page6 },
-  { path: '/page7', component: Page7 },
-  
-  { path: '*', redirect: '/404' }
+
+  {
+    path: '',
+    component: Layout,
+    template: '<router-view/>',
+  },
+  {
+    path: '/AOB',
+    component: Layout,
+    children: [{
+      path: '',
+      component: AOB,
+      name: 'AOB',
+      meta: { title: 'dashboard', noCache: true, affix: true }
+    }]
+  },
+  {
+    path: '/BalanceReport',
+    component: Layout,
+    children: [{
+      path: '',
+      component: BalanceReport
+    }]
+  },
+  {
+    path: '/IssueTracker',
+    component: Layout,
+    children: [{
+      path: '',
+      component: IssueTracker
+    }]
+  },
+  {
+    path: '/Home',
+    component: Layout,
+    children: [{
+      path: '',
+      component: Home
+    }]
+  },
+  {
+    path: '/Matrix',
+    component: Layout,
+    children: [{
+      path: '',
+      component: Matrix
+    }]
+  },
+  {
+    path: '/Minutes',
+    component: Layout,
+    children: [{
+      path: '',
+      component: Minutes
+    }]
+  },
 ]
 
 export default routes

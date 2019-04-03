@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <el-row>
-      <el-button>Page2</el-button>
+      <el-button>This is page Minutes</el-button>
     </el-row>
   </div>
 </template>

@@ -1,6 +1,8 @@
 <template>
-  <div class="main" style="text-align: center;">
-    <h1>404 PAGE NOT FOUND</h1>
+  <div class="main">
+    <el-row>
+      <el-button>111</el-button>
+    </el-row>
   </div>
 </template>
 
