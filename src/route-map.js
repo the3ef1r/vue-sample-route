@@ -1,20 +1,24 @@
-import AOB from './AOB/index.vue'
-import BalanceReport from './BalanceReport/index.vue'
-import Home from './Home/index.vue'
-import IssueTracker from './IssueTracker/index.vue'
-import Minutes from './Minutes/index.vue'
-import Matrix from './Matrix/index.vue'
-import Layout from './components/Layout.vue'
+import AOB from './components/pages/AOB/index.vue'
+import BalanceReport from './components/pages/BalanceReport/index.vue'
+import Home from './components/pages/Home/index.vue'
+import HomeDialog from './components/pages/HomeDialog/index.vue'
+import IssueTracker from './components/pages/IssueTracker/index.vue'
+import Minutes from './components/pages/Minutes/index.vue'
+import Matrix from './components/pages/Matrix/index.vue'
+import MatrixDialog from './components/pages/MatrixDialog/index.vue'
+import Layout from './components/Layout/Layout.vue'
+import Administrator from './components/pages/Administrator/index.vue'
+import OTIF from './components/pages/OTIF/index.vue'
+import SLA from './components/pages/SLA/index.vue'
 
 
 
-
-const routes = [
+var routes = [
 
   {
-    path: '',
+    path: '/',
     component: Layout,
-    template: '<router-view/>',
+    redirect: '/Home'
   },
   {
     path: '/AOB',
@@ -23,7 +27,11 @@ const routes = [
       path: '',
       component: AOB,
       name: 'AOB',
-      meta: { title: 'dashboard', noCache: true, affix: true }
+      meta: { title: 'Any Other Business' },
+      props: {
+        default: true,
+        pageName: 'AOB'
+      }
     }]
   },
   {
@@ -31,40 +39,119 @@ const routes = [
     component: Layout,
     children: [{
       path: '',
-      component: BalanceReport
-    }]
+      component: BalanceReport,
+      meta: { title: 'Contract Balance Report' },
+    }],
+    props: {
+      default: true,
+      pageName: 'Contract Balance Report'
+    }
   },
   {
     path: '/IssueTracker',
     component: Layout,
     children: [{
       path: '',
-      component: IssueTracker
-    }]
+      component: IssueTracker,
+      meta: { title: 'Issue Tracker' },
+    }],
+    props: {
+      default: true,
+      pageName: 'Issue Tracker'
+    }
   },
   {
     path: '/Home',
     component: Layout,
     children: [{
       path: '',
-      component: Home
+      component: Home,
+      meta: { title: 'Welcome to COMOS WEBPORTAL' },
+    }],
+    props: {
+      default: true,
+      pageName: 'Welcome to COMOS WEBPORTAL'
+    }
+  },
+  {
+    path: '/HomeDialog',
+    component: Layout,
+    children: [{
+      path: '',
+      component: HomeDialog,
+      meta: { title: 'Welcome to COMOS WEBPORTAL' },
     }]
+  },
+  {
+    path: '/Administrator',
+    component: Layout,
+
+    children: [{
+      path: '',
+      component: Administrator,
+      meta: { title: 'Administration' },
+    }],
+    props: {
+      default: true,
+      pageName: 'Administration'
+    }
+  },
+  {
+    path: '/SLA',
+    component: Layout,
+
+    children: [{
+      path: '',
+      component: SLA,
+      meta: { title: 'SLA' },
+    }],
+  },
+  {
+    path: '/OTIF',
+    component: Layout,
+
+    children: [{
+      path: '',
+      component: OTIF,
+      meta: { title: 'OTIF' },
+    }],
   },
   {
     path: '/Matrix',
     component: Layout,
     children: [{
       path: '',
-      component: Matrix
+      component: Matrix,
+      meta: { title: 'Escalation Matrix / Out of hours contact details' },
+    }],
+    props: {
+      default: true,
+      pageName: 'Escalation Matrix / Out of hours contact details'
+    }
+
+  },
+  {
+    path: '/MatrixDialog',
+    component: Layout,
+    children: [{
+      path: '',
+      component: MatrixDialog,
+      meta: { title: 'Escalation Matrix / Out of hours contact details' },
     }]
+
   },
   {
     path: '/Minutes',
     component: Layout,
     children: [{
       path: '',
-      component: Minutes
-    }]
+      component: Minutes,
+      meta: { title: 'COMOS Call Minutes ' },
+    }],
+    props: {
+      default: true,
+      pageName: 'COMOS Call Minutes!'
+    }
   },
 ]
 

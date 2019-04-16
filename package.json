@@ -7,13 +7,19 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --progress --watch --hide-modules"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "element-ui": "^2.6.1",
     "vue": "^2.5.11",
+    "vue-masonry": "^0.11.7",
     "vue-meta": "^1.6.0",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "y": "^0.3.2"
   },
   "browserslist": [
     "> 1%",
@@ -31,8 +37,9 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.2",
-    "vue-loader": "^13.0.5",
     "url-loader": "^0.5.8",
+    "vue-loader": "^13.0.5",
+    "vue-masonry-css": "^1.0.3",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
