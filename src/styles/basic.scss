@@ -23,10 +23,20 @@ body {
 
 }
 .btn {
-
   width: 100%;
 }
-
+.container--minutes {
+  min-height: calc(100vh - 132px);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.custom-dialog {
+  .el-dialog__body {
+    text-align: center;
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -63,32 +73,34 @@ main {
   }
 }
 .buttons-row {
-  display: grid!important;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  
-  @media (max-width: 991px) {
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-  }
-  @media (max-width: 565px) {
-    grid-template-columns: repeat(1,1fr);
-  }
-  
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+  flex-wrap: wrap;
+  position: relative;
 }
 .minute__btn {
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
   color: #3162b1;
-  padding: 0;
+  padding: 10px;
+  position: relative;
   transition: all 0.12s ease;
+  width: calc(100% / 4);
+  box-sizing: border-box;
+  max-width: 100%;
+  @media screen and (max-width: 1100px){
+    width: calc(100% / 3);
+  }
+  @media screen and (max-width: 767px){
+    width: calc(100% / 2);
+  }
+  @media screen and (max-width: 565px){
+    width: 100%;
+  }
 }
 /* width */
 ::-webkit-scrollbar {

@@ -20,7 +20,7 @@
         <img :src="homepageimage" class="home-image">
       </template>
     </main-content>
-    <el-dialog title :visible.sync="dialogVisible" width="90%">
+    <el-dialog title :visible.sync="dialogVisible" width="70%" class="custom-dialog">
       <img :src="homepageimage" class="home-image">
     </el-dialog>
   </el-container>

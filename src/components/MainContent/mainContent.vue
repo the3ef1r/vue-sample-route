@@ -4,7 +4,7 @@
         <slot name="image-main"></slot>
         
       </div>
-      <el-row class="d-flex">
+      <el-row class="d-flex three-buttons">
         <button-box v-for="button in buttons">
           <template v-slot:head-text>{{button.headText}}</template>
           <template v-slot:main-text>{{button.mainText}}</template>
@@ -23,21 +23,21 @@ export default {
 }
 </script>
 <style lang="scss">
+.three-buttons {
+  min-height: 196px;
+  margin-top: auto;
+}
 .right-section {
   margin-left: 30px;
-  display: grid;
-  grid-template-rows: 1fr 195px;
-  grid-template-columns: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  grid-row-gap: 20px;
   padding-bottom: 5px;
   @media (max-width: 991px){
-      margin-left: 0;
-      grid-template-rows: 400px 210px;
-      padding-bottom: 20px;
-    }
+    margin-left: 0;
+  }
   @media screen and (max-width: 565px) {
-    display: block;
      > *:nth-child(1n) {
       margin-bottom: 20px;
     }
@@ -53,13 +53,16 @@ export default {
   min-height: 200px;
   height: 100%;
   width: 100%;
-  
+  max-height: 550px;
+  margin-bottom: 20px;
 }
 .home-image {
   max-height: 100%;
-  max-width: 100%;
+  max-width: 600px;
   margin: 0 auto;
-  
+  @media screen and (min-height: 770px) {
+    max-width: 100%;
+  }
   @media (max-width: 991px) {
     max-height: calc(100% - 80px);
     max-width: 676.9px;

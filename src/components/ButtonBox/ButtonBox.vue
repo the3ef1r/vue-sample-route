@@ -30,11 +30,10 @@ export default {
   justify-content: space-between;
   color: #3162b1;
   transition: all .2s ease 0s;
-  height: 100%;
+  
   border: 5px solid #fff;
   &:not(:last-child) {
     margin-right: 20px;
-    margin-bottom: 20px;
   }
   &:hover,&:focus {
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(172, 209, 252, 0.5) 100%), #FFFFFF;

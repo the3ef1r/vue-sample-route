@@ -1,5 +1,5 @@
 <template>
-  <el-container style="flex-direction: column; margin: 0 auto;">
+  <el-container class="container--minutes">
     <div class="buttons-row">
       <div v-for="item in items" class="minute__btn">
         <button-minutes>
